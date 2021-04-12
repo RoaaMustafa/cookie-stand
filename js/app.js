@@ -1,5 +1,63 @@
 'use strict';
 //------------LAB07(CONSTRUCTOR)---------------------
+function getRandome(min, max){
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+function headerRow(){
+  let thHeader = document.createElement('th');
+  table.appendChild(thHeader);
+}
+function footerRow(){
+  let trRowfooter =document.createElement('tr');
+  table.appendChild(trRowfooter);
+}
+
+// constructing a function
+let arrayOfLocattions = [];
+let workHrs= ['6am','7am','8am','9am','10am', '11am','12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm','7pm'],
+function Locations (locationName,minCust,maxCust,avgCookies){
+  this.locationName = locationName;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookies = avgCookies;
+  this.cookiesPerHr = [];
+  this.totalCookiesPerHr = 0;
+  arrayOfLocattions.push(this);
+}
+
+// create the objects
+let seattle = new Locations('Seattle',23,65,6.3);
+let tokyo = new Locations('Tokyo',3,24,1.2);
+let dubai = new Locations('Dubai',11,38,3.7);
+let paris = new Locations('Paris',20,38,2.3);
+let lima = new Locations('Lima',2,16,4.6);
+// Methods
+
+Locations.prototype.render = function(){
+  let container =document.getElementById('cookiesSales');
+  let table = document.createElement('table');
+    container.appendChild(table);
+    let thHeader=null;
+     let trRow =null;
+     let tdNumbers =null;
+
+     for (let i = 0; i < 14; i++) {
+      // thHeader = document.createElement('th');
+      //  table.appendChild(thHeader);
+       thHeader.textContent = `${workHrs[i]}`;
+     }   
+     for  (let i=0 ;i<14 ; i++){
+       trRow =document.createElement('tr');
+       tdNumbers=document.createElement(trRow);
+       trRow.appendChild(tdNumbers);
+
+  }
+      }
+    
+      for(let i = 0 ; i< arrayOfLocattions.length; i++){
+        arrayOfLocattions[i].render();
+        
+    }
 
 
 
@@ -133,7 +191,7 @@
 
 // //  ---------Dubai---------
 // const Dubai ={
-//   locationName:'Dobai',
+//   locationName:'Dubai',
 //   minCust: 11,
 //   maxCust: 38,
 //   avgCookies: 3.7,
