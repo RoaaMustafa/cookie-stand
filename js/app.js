@@ -70,7 +70,7 @@ function renderHeader() {
     trEl.appendChild(thEl);
   }
   let thElTotal = document.createElement('th');
-  thElTotal.textContent = 'Total';
+  thElTotal.textContent = 'Daily Location Total';
   trEl.appendChild(thElTotal);
 
 }
