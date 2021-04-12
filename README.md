@@ -1,8 +1,8 @@
 # cookie-stand
 ## for Labb 06 code 201
 ### create objects
-###  for lab07:add constructor function
-+resources helped me:
+## for lab07:add constructor function
++ resources helped me:
 [https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
 [https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/](https://www.freecodecamp.org/news/javascript-addeventlistener-example-code/)
