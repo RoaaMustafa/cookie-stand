@@ -6,17 +6,11 @@ const seattle ={
   avgCookies: 6.3,
   workHrs: ['6am','7am','8am','9am','10am', '11am','12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm','7pm'],
   cookiesPerHr:[],
-  custPerHrs:[],
   totalCookiesPerHr:0,
   cookiesEachHour: function () {
     for (let n = 0; n < 14; n++) {
-      this.cookiesPerHr.push(Math.floor(this.custPerHrs[n] * this.avgCookies));
-      this.totalCookiesPerHr+= this.cookiesPerHr[n];
-    }
-  },
-  randNumber: function () {
-    for (let i = 0; i < 14 ; i++) {
-      this.custPerHrs.push( Math.floor(Math.random() * (this.maxCust - this.minCust + 1 ) + this.minCust ));
+      this.cookiesPerHr.push(Math.ceil(getRandome(this.minCust,this.maxCust) * this.avgCookies));
+      this.totalCookiesPerHr +=this.cookiesPerHr[n];
     }
   },
   createList: function () {
@@ -36,19 +30,14 @@ const seattle ={
     li1.textContent= `Total: ${this.totalCookiesPerHr} Cookies`;
     let breakline = document.createElement('hr');
     container.appendChild(breakline);
-
   }
 };
-
-console.log(seattle.cookiesEachHour());
-console.log(seattle.createList());
-console.log(seattle.randNumber());
-console.log(seattle.cookiesPerHr);
-console.log(seattle.custPerHrs);
-console.log(seattle.totalCookiesPerHr);
-
-
-
 seattle.cookiesEachHour();
 seattle.createList();
-seattle.randNumber();
+
+function getRandome(min, max){
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+console.log(seattle.cookiesEachHour());
+console.log(seattle.cookiesPerHr);
+console.log(seattle.totalCookiesPerHr);
