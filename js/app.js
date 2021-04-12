@@ -75,6 +75,7 @@ function renderHeader() {
 
 }
 let tableEl2 = document.getElementById('cookiesSales');
+
 //console.log(tableEl2);
 //to send data to a browser webpage use:`event.addEventListier`
 tableEl2.addEventListener('submit',function(event){
@@ -94,20 +95,20 @@ function renderFooter() {
   trEl.appendChild(tdEl);
   tdEl.textContent = 'Total';
   let hourTotal;
-  let megaTotal = 0;
-  for (let hour = 0; hour < workHrs.length; hour++) {
+  let totalForAllLocations = 0;
+  for (let h = 0; h < workHrs.length; h++) {
     hourTotal = 0;
-    for (let shop = 0; shop < locationsArray.length; shop++) {
-      hourTotal += locationsArray[shop].cookiesPerHr[hour];
+    for (let p = 0; p < locationsArray.length; p++) {
+      hourTotal += locationsArray[p].cookiesPerHr[h];
     }
     let tdElTotalHour = document.createElement('td');
     tdElTotalHour.textContent = hourTotal;
-    megaTotal += hourTotal;
+    totalForAllLocations += hourTotal;
     trEl.appendChild(tdElTotalHour);
   }
-  let tdMegaTotal = document.createElement('td');
-  tdMegaTotal.textContent = megaTotal;
-  trEl.appendChild(tdMegaTotal);
+  let tdTotalLocations = document.createElement('td');
+  tdTotalLocations.textContent = totalForAllLocations;
+  trEl.appendChild(tdTotalLocations);
 
 }
 renderHeader();
