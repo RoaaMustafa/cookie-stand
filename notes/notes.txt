@@ -1,0 +1,4 @@
+
+ //To prevent a browser’s default behavior use:`event.preventDefault();`
+  //event.preventDefault();
+ //tableEl.deleteRow(tableEl.rows.length-1);
