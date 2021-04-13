@@ -1,27 +1,58 @@
-#cookiesSales table{
-    border: 2px solid  green;
+table , th , td , tr{
+    border-spacing: 3px;
+    padding: 5px; 
+}
 
+th{
+    background-color:#1877cf ;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+td{
+    background-color: #6ed40e;
+    border-radius: 10px;
+    padding:20px;
+    text-align: center;
+    
 }
 body{
     box-sizing: border-box;
-    background-color: whitesmoke;
     font-family: Arial;
     padding: 100px;
+    position: relative;
+    background-color: #aff7cd;
 }
 header{
-    background-color: #555555;
-    position: relative;   
+    background-color:#00ff73;
+    height: 100px;
+    text-align: center;
+    padding-top: 10px;
 }
 main img {
-    position: relative;
-    left:280px;
-    top:10px;
-    bottom: 40px;
-    padding: 20px;
+padding-left: 270px;
+
 }
 #hours{
-
+background-color:#00ff73 ;
 }
 #location{
+    background-color: white;
 
+}
+ main div ul{
+    display: inline-block;
+    position: relative;
+    left:0px;
+}
+main div ul li {
+   text-decoration: none;
+
+}
+#contact{
+    background-color:#00ff73;
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
 }
