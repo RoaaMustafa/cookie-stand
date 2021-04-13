@@ -2,3 +2,26 @@
     border: 2px solid  green;
 
 }
+body{
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    font-family: Arial;
+    padding: 100px;
+}
+header{
+    background-color: #555555;
+    position: relative;   
+}
+main img {
+    position: relative;
+    left:280px;
+    top:10px;
+    bottom: 40px;
+    padding: 20px;
+}
+#hours{
+
+}
+#location{
+
+}
