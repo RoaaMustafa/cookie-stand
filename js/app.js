@@ -1,22 +1,12 @@
 'use strict';
 //------------LAB07(CONSTRUCTOR)---------------------
-
-
-// // constructing a function
-
-
 let workHrs = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-//helper function
-function getRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+
 let locationsArray = [];
 let container = document.getElementById('cookiesSales');
 let tableEl = document.createElement('table');
 container.appendChild(tableEl);
-
+// constructing a function
 function Locations(locationName, minCust, maxCust, avgCookies) {
   this.locationName = locationName;
   this.minCust = minCust;
@@ -28,6 +18,7 @@ function Locations(locationName, minCust, maxCust, avgCookies) {
   locationsArray.push(this);
   this.getCookies();
 }
+// creating methods
 Locations.prototype.getCookies = function () {
   for (let i = 0; i < workHrs.length; i++) {
     let x = Math.floor((getRandom(this.minCust, this.maxCust) * this.avgCookies));
@@ -50,6 +41,7 @@ Locations.prototype.render = function () {
   trEl.appendChild(tdTotal);
   tdTotal.textContent = this.total;
 };
+//creat the object to pused them inside Locations Array
 new Locations('Seatle', 23, 65, 6.3);
 new Locations('Tokyo', 3, 24, 1.2);
 new Locations('Dubai',11, 38, 3.7);
@@ -74,18 +66,22 @@ function renderHeader() {
 
 }
 let tableEl2 = document.getElementById('cookiesSales');
-
 //console.log(tableEl2);
-//to send data to a browser webpage use:`event.addEventListier`
+//to send data to a browser webpage use:event.addEventListier
+//to find out the elements values using event.target
 tableEl2.addEventListener('submit',function(event){
   let locationName = event.target.locationName.value;
   let minCust = event.target.minCust.value;
   let maxCust = event.target.maxCust.value;
   let avgCookies = event.target.avgCookies.value;
-  let newCalc = new Locations(locationName,minCust,maxCust,avgCookies);
-  newCalc.render();
+  //create new object to store values in
+  let totalCalc = new Locations(locationName,minCust,maxCust,avgCookies);
+  totalCalc.render();
   renderFooter();
 });
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 //Footer
 function renderFooter() {
   let trEl =document.createElement('tr');
@@ -95,12 +91,13 @@ function renderFooter() {
   tdEl.textContent = 'Total';
   let hourTotal;
   let totalForAllLocations = 0;
-  //to calc total in 
+  //to calc total in each column
   for (let h = 0; h < workHrs.length; h++) {
     hourTotal = 0;
     for (let p = 0; p < locationsArray.length; p++) {
       hourTotal += locationsArray[p].cookiesPerHr[h];
     }
+    //storing the calulations in the array
     let tdElTotalHour = document.createElement('td');
     tdElTotalHour.textContent = hourTotal;
     totalForAllLocations += hourTotal;
@@ -109,14 +106,12 @@ function renderFooter() {
   let tdTotalLocations = document.createElement('td');
   tdTotalLocations.textContent = totalForAllLocations;
   trEl.appendChild(tdTotalLocations);
-
 }
 renderHeader();
 for (let i = 0; i < locationsArray.length; i++) {
   locationsArray[i].render();
 }
 renderFooter();
-
 
 
 
