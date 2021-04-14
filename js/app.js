@@ -1,5 +1,10 @@
 'use strict';
 //------------LAB07(CONSTRUCTOR)---------------------
+
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 let workHrs = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 let locationsArray = [];
@@ -16,8 +21,15 @@ function Locations(locationName, minCust, maxCust, avgCookies) {
   this.total = 0;
   // console.log(this);
   locationsArray.push(this);
-  this.getCookies();
+
 }
+//creat the object to pused them inside Locations Array
+let seattle=new Locations('Seatle', 23, 65, 6.3);
+let tokyo=new Locations('Tokyo', 3, 24, 1.2);
+let dubai= new Locations('Dubai',11, 38, 3.7);
+let paris= new Locations('Paris', 20, 38, 2.3);
+let lima = new Locations('Lima', 2, 16, 4.60);
+
 // creating methods
 Locations.prototype.getCookies = function () {
   for (let i = 0; i < workHrs.length; i++) {
@@ -26,27 +38,12 @@ Locations.prototype.getCookies = function () {
     this.total += this.cookiesPerHr[i];
   }
 };
-Locations.prototype.render = function () {
-  let trEl = document.createElement('tr');
-  tableEl.appendChild(trEl);
-  let tdEl = document.createElement('td');
-  trEl.appendChild(tdEl);
-  tdEl.textContent = this.locationName;
-  for (let i = 0; i < workHrs.length; i++) {
-    tdEl = document.createElement('td');
-    trEl.appendChild(tdEl);
-    tdEl.textContent = this.cookiesPerHr[i];
-  }
-  let tdTotal = document.createElement('td');
-  trEl.appendChild(tdTotal);
-  tdTotal.textContent = this.total;
-};
-//creat the object to pused them inside Locations Array
-new Locations('Seatle', 23, 65, 6.3);
-new Locations('Tokyo', 3, 24, 1.2);
-new Locations('Dubai',11, 38, 3.7);
-new Locations('Paris', 20, 38, 2.3);
-new Locations('Lima', 2, 16, 4.60);
+seattle.getCookies();
+tokyo.getCookies();
+dubai.getCookies();
+paris.getCookies();
+lima.getCookies();
+
 //Row-header
 function renderHeader() {
   let trEl = document.createElement('tr');
@@ -65,23 +62,52 @@ function renderHeader() {
   trEl.appendChild(thElTotal);
 
 }
-let tableEl2 = document.getElementById('cookiesSales');
-//console.log(tableEl2);
-//to send data to a browser webpage use:event.addEventListier
-//to find out the elements values using event.target
-tableEl2.addEventListener('submit',function(event){
-  let locationName = event.target.locationName.value;
-  let minCust = event.target.minCust.value;
-  let maxCust = event.target.maxCust.value;
-  let avgCookies = event.target.avgCookies.value;
-  //create new object to store values in
-  let totalCalc = new Locations(locationName,minCust,maxCust,avgCookies);
-  totalCalc.render();
+renderHeader();
+Locations.prototype.render = function () {
+  let trEl = document.createElement('tr');
+  tableEl.appendChild(trEl);
+  let tdEl = document.createElement('td');
+  trEl.appendChild(tdEl);
+  tdEl.textContent = this.locationName;
+  for (let i = 0; i < workHrs.length; i++) {
+    tdEl = document.createElement('td');
+    trEl.appendChild(tdEl);
+    tdEl.textContent = this.cookiesPerHr[i];
+  }
+  let tdTotal = document.createElement('td');
+  trEl.appendChild(tdTotal);
+  tdTotal.textContent = this.total;
+};
+Locations.prototype.deleteRow = function(){
+  tableEl.deleteRow(tableEl.rows.length-1);
+};
+
+//get the form
+const form = document.getElementById('cookieForm');
+console.log(form);
+//  attach the form to a addeventlistener
+form.addEventListener('submit',submittnewRow);
+function submittnewRow(event){
+  event.preventDefault();//will prevent refreshing
+  // console.log(submittnewRow);
+  console.log(event);
+  let newLocationName =event.target.nameField.value;
+  newLocationName.split(',');
+  let miniMum = event.target.minField.value;
+  miniMum=parseInt(miniMum);
+  let maxiMum =event.target.maxField.value;
+  miniMum=parseInt(miniMum);
+  let avg =event.target.avgField.value;
+  avg =parseInt(avg);
+  console.log(newLocationName,miniMum,maxiMum,avg);
+  let local =new Locations(newLocationName,miniMum,maxiMum,avg);
+  local.getCookies();
+  local.deleteRow();
+  local.render();
   renderFooter();
-});
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+
 }
+
 //Footer
 function renderFooter() {
   let trEl =document.createElement('tr');
@@ -91,7 +117,7 @@ function renderFooter() {
   tdEl.textContent = 'Total';
   let hourTotal;
   let totalForAllLocations = 0;
-  //to calc total in each column
+  //to calc total in each  alone hour
   for (let h = 0; h < workHrs.length; h++) {
     hourTotal = 0;
     for (let p = 0; p < locationsArray.length; p++) {
@@ -107,11 +133,13 @@ function renderFooter() {
   tdTotalLocations.textContent = totalForAllLocations;
   trEl.appendChild(tdTotalLocations);
 }
-renderHeader();
+
 for (let i = 0; i < locationsArray.length; i++) {
+  locationsArray[i].getCookies();
   locationsArray[i].render();
 }
 renderFooter();
+
 
 
 
