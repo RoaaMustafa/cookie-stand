@@ -21,7 +21,7 @@ function Locations(locationName, minCust, maxCust, avgCookies) {
   this.total = 0;
   // console.log(this);
   locationsArray.push(this);
-  // this.getCookies();
+
 }
 //creat the object to pused them inside Locations Array
 let seattle=new Locations('Seatle', 23, 65, 6.3);
@@ -43,6 +43,7 @@ tokyo.getCookies();
 dubai.getCookies();
 paris.getCookies();
 lima.getCookies();
+
 //Row-header
 function renderHeader() {
   let trEl = document.createElement('tr');
@@ -78,18 +79,15 @@ Locations.prototype.render = function () {
   tdTotal.textContent = this.total;
 };
 
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
 
+//get the form
 const form = document.getElementById('cookieForm');
 console.log(form);
-
-form.addEventListener('submit',submittNew);
-function submittNew(event){
+//  attach the form to a addeventlistener
+form.addEventListener('submit',submittnewRow);
+function submittnewRow(event){
   event.preventDefault();//will prevent refreshing
+  console.log(submittnewRow);
   console.log(event);
   let newLocationName =event.target.nameField.value;
   console.log(newLocationName);
@@ -105,20 +103,7 @@ function submittNew(event){
   let newNameLocation = new Locations(newLocationName,miniMum,maxiMum,avg);
   newNameLocation.getCookies();
   newNameLocation.render();
-
-
 }
-// form.addEventListener('submit',function(event){
-// let locationName = event.target.locationName.value;
-// let minCust = event.target.minCust.value;
-//   let maxCust = event.target.maxCust.value;
-//   let avgCookies = event.target.avgCookies.value;
-//   //create new object to store values in
-//   let totalCalc = new Locations(locationName,minCust,maxCust,avgCookies);
-//   totalCalc.render();
-//   renderFooter();
-// });
-
 //Footer
 function renderFooter() {
   let trEl =document.createElement('tr');
