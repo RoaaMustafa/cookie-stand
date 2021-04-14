@@ -95,7 +95,6 @@ lima.render();
 //   //create new object to store values in
 //   let totalCalc = new Locations(locationName,minCust,maxCust,avgCookies);
 //   totalCalc.render();
-//   renderFooter();
 // });
 
 //Footer
@@ -107,7 +106,7 @@ function renderFooter() {
   tdEl.textContent = 'Total';
   let hourTotal;
   let totalForAllLocations = 0;
-  //to calc total in each column
+  //to calc total in each  alone hour
   for (let h = 0; h < workHrs.length; h++) {
     hourTotal = 0;
     for (let p = 0; p < locationsArray.length; p++) {
