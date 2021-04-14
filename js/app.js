@@ -78,7 +78,9 @@ Locations.prototype.render = function () {
   trEl.appendChild(tdTotal);
   tdTotal.textContent = this.total;
 };
-
+Locations.prototype.deleteRow = function(){
+  tableEl.deleteRow(tableEl.rows.length-1);
+};
 
 //get the form
 const form = document.getElementById('cookieForm');
@@ -87,23 +89,25 @@ console.log(form);
 form.addEventListener('submit',submittnewRow);
 function submittnewRow(event){
   event.preventDefault();//will prevent refreshing
-  console.log(submittnewRow);
+  // console.log(submittnewRow);
   console.log(event);
   let newLocationName =event.target.nameField.value;
-  console.log(newLocationName);
+  newLocationName.split(',');
   let miniMum = event.target.minField.value;
-  console.log(miniMum);
-  miniMum=miniMum.parsInt();
+  miniMum=parseInt(miniMum);
   let maxiMum =event.target.maxField.value;
-  console.log(maxiMum);
-  miniMum=miniMum.parsInt();
+  miniMum=parseInt(miniMum);
   let avg =event.target.avgField.value;
-  console.log(avg);
-  avg =avg.paris();
-  let newNameLocation = new Locations(newLocationName,miniMum,maxiMum,avg);
-  newNameLocation.getCookies();
-  newNameLocation.render();
+  avg =parseInt(avg);
+  console.log(newLocationName,miniMum,maxiMum,avg);
+  let local =new Locations(newLocationName,miniMum,maxiMum,avg);
+  local.getCookies();
+  local.deleteRow();
+  local.render();
+  renderFooter();
+
 }
+
 //Footer
 function renderFooter() {
   let trEl =document.createElement('tr');
@@ -135,6 +139,7 @@ for (let i = 0; i < locationsArray.length; i++) {
   locationsArray[i].render();
 }
 renderFooter();
+
 
 
 
