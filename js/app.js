@@ -65,20 +65,8 @@ function renderHeader() {
   trEl.appendChild(thElTotal);
 
 }
-let tableEl2 = document.getElementById('cookiesSales');
-//console.log(tableEl2);
-//to send data to a browser webpage use:event.addEventListier
-//to find out the elements values using event.target
-tableEl2.addEventListener('submit',function(event){
-  let locationName = event.target.locationName.value;
-  let minCust = event.target.minCust.value;
-  let maxCust = event.target.maxCust.value;
-  let avgCookies = event.target.avgCookies.value;
-  //create new object to store values in
-  let totalCalc = new Locations(locationName,minCust,maxCust,avgCookies);
-  totalCalc.render();
-  renderFooter();
-});
+
+
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
