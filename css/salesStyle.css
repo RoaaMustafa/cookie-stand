@@ -1,0 +1,126 @@
+table{
+    position: relative;
+   top:100px;
+}
+table , th , td , tr{
+    border-spacing: 3px;
+    padding: 200px; 
+    font-family: 'Fredoka One', cursive;
+}
+
+th{
+    background-color:#e97407 ;
+    border-radius: 10px;
+    padding: 1px;
+
+}
+
+td{
+    background-color: #f0c538e0;
+    border-radius: 10px;
+    padding:10px;
+    text-align: center;
+    
+}
+body{
+   background-image: url(../images/wp.jpg);
+   background-position:center; 
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+form{
+    position: absolute;
+    width:1000px;
+    height: 200px;
+   border-radius: 10px;
+   left:200px;
+   top:160px;
+
+
+}
+legend{
+    position: relative;
+    color: white;
+    
+}
+form label,input{
+    position: relative;
+    padding-left: 50px;
+    top:2px;
+    bottom: 2px;
+    color: rgb(255, 255, 255);
+
+}
+form input{
+   background-color: rgb(255, 186, 57);
+   border-radius: 10px;
+border-width: 0px;
+}
+form input:last-child{
+    position: relative;
+    color: #fc3402;
+    font-family: 'Fredoka One', cursive;
+    font-weight: bolder;
+    padding-left: 5px;
+    left: 140px;
+}
+header{
+    border-radius: 200px;
+    position: relative;
+    padding: 5px;
+    background-image: url(../images/photo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+}
+header h1{
+    position:relative;
+    left: 150px;
+    font-family: 'Yesteryear', cursive;
+    font-weight: bolder;
+    color: #fcd602;
+
+}
+header h4{
+    position:relative;
+    left: 150px;
+    font-family: 'Fredoka One', cursive;
+    bottom: 20px;
+    color: #ff9900;
+}
+header a{
+ position: absolute; 
+bottom: 60px;
+right: 590px;
+text-decoration: none;
+font-family: 'Fredoka One', cursive;
+color: #fcd602;
+font-size: x-large;
+}
+header img{
+position: absolute; 
+width:22px;
+border-radius: 10px;
+right:566px;
+bottom: 64px;
+}
+#smileCookies{
+    position: absolute; 
+    width: 110px;
+    height: 110px;
+    left:40px;
+    top:20px;
+}
+footer{
+    position: relative;
+    text-align: center;
+    background-color: black;
+    color: #e97407;
+    opacity: 0.6;
+    width: 500px;
+    border-radius: 30px;
+    left:400px;
+}

@@ -96,7 +96,7 @@ function submittnewRow(event){
   let miniMum = event.target.minField.value;
   miniMum=parseInt(miniMum);
   let maxiMum =event.target.maxField.value;
-  miniMum=parseInt(miniMum);
+  miniMum=parseInt(maxiMum);
   let avg =event.target.avgField.value;
   avg =parseInt(avg);
   console.log(newLocationName,miniMum,maxiMum,avg);
