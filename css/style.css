@@ -45,7 +45,7 @@ font-size: large;
 
 
 body{
-    position: relative;
+  position: relative;
   background-color: #ecc441e0;
   font-family: 'Cedarville Cursive', cursive;
   padding: 100px;
@@ -67,12 +67,11 @@ footer{
 .aboutUS {
     text-align: justify;
     position: relative;
-    padding: 50px;
+    padding: 30px;
      width: 30%;
      background-color: rgba(0, 0, 0, 0.233);
      border-radius:30px ;
      top:30px;
-     left:30px;
 
 }
 .aboutUS h2{
