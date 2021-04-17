@@ -112,7 +112,7 @@ header h4{
 header a{
  position: absolute; 
 bottom: 44px;
-right: 590px;
+right: 800px;
 text-decoration: none;
 font-family: 'Fredoka One', cursive;
 color: #fcd602;
@@ -122,7 +122,7 @@ header img{
 position: absolute; 
 width:20px;
 border-radius: 10px;
-right:640px;
+right:774px;
 bottom: 43px;
 }
 footer{
