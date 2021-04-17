@@ -60,17 +60,13 @@ footer{
     left:40%;
     top:500px;  
 }
-/* main h2{
-    font-family: Verdana;
-    font-size: larger;  
+#location{
+    position: relative;
+    font-family:'Franklin Gothic Medium';
+    padding: 100px;
+
 }
-#location ol li{
-display: inline-block;
-}
-iframe{
-    width: 100px;
-    height: 100px;
-} */
+
 
 body{
     position: relative;
@@ -86,8 +82,8 @@ body{
      width: 30%;
      background-color: rgba(0, 0, 0, 0.233);
      border-radius:30px ;
-     top:30px;
-     left:30px;
+     top:70px;
+     left:100px;
 
 }
 .aboutUS h2{
@@ -107,11 +103,16 @@ color: dimgray;
 main div img{
     position: relative;
     float:right;
-    padding: 60px;
-    padding-right: 30px;
-    
-
+    top:60px;
+    right: 100px;
+    padding: 2px;
+    box-shadow: 0 9px 50px 0 rgba(226, 79, 5, 0.849), 0 0px 0px 0 rgba(207, 76, 10, 0.418);
 }
+
+/* main div img{
+    box-shadow: 0 0 30px rgb(255, 120, 9); 
+} */
+
 
 /* 
 main img {
