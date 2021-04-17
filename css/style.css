@@ -21,7 +21,7 @@ header h1{
     font-family: 'Yesteryear', cursive;
     font-weight: bolder;
     color: #fcd602;
-     padding-top: 10px;
+     padding-top: 50px;
      font-size: x-large;
 
 }
@@ -32,6 +32,7 @@ header h4{
     color: #ff9900;
     padding-top: 5px;
     font-size: large;
+    padding-top: 30px;
 }
 header a{
  position: absolute; 
