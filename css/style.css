@@ -130,8 +130,32 @@ main div img{
    background-color: rgba(0, 0, 0, 0.308);
    border-radius: 20px;
 }
-.location ol li {
-    padding-bottom: 20px;
+.location ol li,#hours ul li ,#contact ul li{
+    position: relative;
+    padding-top: 20px;
     font-size: larger;
+    left:100px;
 }
-
+#contact h2{
+    position: relative;  
+    left:100px;
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: darkslategray;
+}
+#contact{
+    position: relative;
+    font-family:'Franklin Gothic Medium';
+    top:90px;
+    left: 40px;;
+}
+#images ul li{
+    position: relative; 
+    display: inline-block; 
+    padding: 10px;
+    top:30px;
+   left: 100px;
+   background-color: rgba(0, 0, 0, 0.308);
+   border-radius: 20px; 
+}
