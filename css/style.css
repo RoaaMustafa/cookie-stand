@@ -36,7 +36,7 @@ header h4{
 header a{
  position: absolute; 
 bottom: 44px;
-right: 800px;
+right: 600px;
 text-decoration: none;
 font-family: 'Fredoka One', cursive;
 color: #fcd602;
@@ -71,8 +71,8 @@ footer{
      width: 30%;
      background-color: rgba(0, 0, 0, 0.233);
      border-radius:30px ;
-     top:70px;
-     left:100px;
+     top:30px;
+     left:30px;
 
 }
 .aboutUS h2{
@@ -93,7 +93,7 @@ main div img{
     position: relative;
     float:right;
     top:60px;
-    right: 100px;
+    right: 40px;
     padding: 2px;
     box-shadow: 0 9px 50px 0 rgba(226, 79, 5, 0.849), 0 0px 0px 0 rgba(207, 76, 10, 0.418);
 }
