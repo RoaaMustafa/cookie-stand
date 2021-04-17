@@ -1,35 +1,119 @@
-table , th , td , tr{
-    border-spacing: 3px;
-    padding: 5px; 
-}
-
-th{
-    background-color:#1877cf ;
-    border-radius: 10px;
-    padding: 20px;
-
-}
-
-td{
-    background-color: #6ed40e;
-    border-radius: 10px;
-    padding:20px;
-    text-align: center;
-    
-}
-body{
-    box-sizing: border-box;
-    font-family: Arial;
-    padding: 100px;
-    position: relative;
-    background-color: #aff7cd;
+*{
+   box-sizing: border-box;
 }
 header{
-    background-color:#00ff73;
+    border-radius: 20px;
+    position: relative;
+    padding: 90px;
     height: 100px;
-    text-align: center;
-    padding-top: 10px;
+    background-image: url(../images/photo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fcd602;
+    width:100%;
+
+
 }
+header h1{
+    position:relative;
+    left: 150px;
+    font-family: 'Yesteryear', cursive;
+    font-weight: bolder;
+    color: #fcd602;
+     padding-top: 10px;
+     font-size: x-large;
+
+}
+header h4{
+    position:relative;
+    left: 140px;
+    font-family: 'Fredoka One', cursive;
+    color: #ff9900;
+    padding-top: 5px;
+    font-size: large;
+}
+header a{
+ position: absolute; 
+bottom: 44px;
+right: 590px;
+text-decoration: none;
+font-family: 'Fredoka One', cursive;
+color: #fcd602;
+font-size: large;
+}
+header img{
+position: absolute; 
+width:20px;
+border-radius: 10px;
+right:640px;
+bottom: 43px;
+}
+footer{
+    position: relative;
+    text-align: center;
+    background-color: black;
+    color: #e97407;
+    opacity: 0.6;
+    width: 500px;
+    border-radius: 30px;
+    left:40%;
+    top:500px;  
+}
+/* main h2{
+    font-family: Verdana;
+    font-size: larger;  
+}
+#location ol li{
+display: inline-block;
+}
+iframe{
+    width: 100px;
+    height: 100px;
+} */
+
+body{
+    position: relative;
+  background-color: #ecc441e0;
+  font-family:'Franklin Gothic Medium';
+  padding: 100px;
+
+}
+.aboutUS {
+    text-align: justify;
+    position: relative;
+    padding: 50px;
+     width: 30%;
+     background-color: rgba(0, 0, 0, 0.233);
+     border-radius:30px ;
+     top:30px;
+     left:30px;
+
+}
+.aboutUS h2{
+   font-size: xx-large;
+   color: dimgray;
+   
+}
+.aboutUS h3{
+font-size: x-large;
+padding-bottom: 9px;
+padding-top: 9px;
+color: dimgray;
+}
+.aboutUS p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+main div img{
+    position: relative;
+    float:right;
+    padding: 60px;
+    padding-right: 30px;
+    
+
+}
+
+/* 
 main img {
 padding-left: 270px;
 
@@ -55,4 +139,4 @@ main div ul li {
     height: 60px;
     text-align: center;
     padding-top: 10px;
-}
+}  */
