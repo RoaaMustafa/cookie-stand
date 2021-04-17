@@ -60,7 +60,7 @@ footer{
     left:40%;
     top:500px;  
 }
-main h2{
+/* main h2{
     font-family: Verdana;
     font-size: larger;  
 }
@@ -70,9 +70,47 @@ display: inline-block;
 iframe{
     width: 100px;
     height: 100px;
-}
+} */
+
 body{
-  
+    position: relative;
+  background-color: #ecc441e0;
+  font-family:'Franklin Gothic Medium';
+  padding: 100px;
+
+}
+.aboutUS {
+    text-align: justify;
+    position: relative;
+    padding: 50px;
+     width: 30%;
+     background-color: rgba(0, 0, 0, 0.233);
+     border-radius:30px ;
+     top:30px;
+     left:30px;
+
+}
+.aboutUS h2{
+   font-size: xx-large;
+   color: dimgray;
+   
+}
+.aboutUS h3{
+font-size: x-large;
+padding-bottom: 9px;
+padding-top: 9px;
+color: dimgray;
+}
+.aboutUS p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+main div img{
+    position: relative;
+    float:right;
+    padding: 60px;
+    padding-right: 30px;
+    
+
 }
 
 /* 
