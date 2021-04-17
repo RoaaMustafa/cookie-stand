@@ -21,7 +21,7 @@ header h1{
     font-family: 'Yesteryear', cursive;
     font-weight: bolder;
     color: #fcd602;
-     padding-top: 10px;
+     padding-top: 30px;
      font-size: x-large;
 
 }
@@ -30,7 +30,7 @@ header h4{
     left: 140px;
     font-family: 'Fredoka One', cursive;
     color: #ff9900;
-    padding-top: 5px;
+    padding-top: 20px;
     font-size: large;
 }
 header a{
@@ -49,6 +49,14 @@ border-radius: 10px;
 right:640px;
 bottom: 43px;
 }
+
+body{
+    position: relative;
+  background-color: #ecc441e0;
+  font-family: 'Cedarville Cursive', cursive;
+  padding: 100px;
+
+}
 footer{
     position: relative;
     text-align: center;
@@ -60,25 +68,8 @@ footer{
     left:40%;
     top:500px;  
 }
-/* main h2{
-    font-family: Verdana;
-    font-size: larger;  
-}
-#location ol li{
-display: inline-block;
-}
-iframe{
-    width: 100px;
-    height: 100px;
-} */
 
-body{
-    position: relative;
-  background-color: #ecc441e0;
-  font-family:'Franklin Gothic Medium';
-  padding: 100px;
 
-}
 .aboutUS {
     text-align: justify;
     position: relative;
@@ -86,8 +77,8 @@ body{
      width: 30%;
      background-color: rgba(0, 0, 0, 0.233);
      border-radius:30px ;
-     top:30px;
-     left:30px;
+     top:70px;
+     left:100px;
 
 }
 .aboutUS h2{
@@ -102,41 +93,74 @@ padding-top: 9px;
 color: dimgray;
 }
 .aboutUS p{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Cedarville Cursive', cursive;
 }
 main div img{
     position: relative;
     float:right;
-    padding: 60px;
-    padding-right: 30px;
-    
-
+    top:60px;
+    right: 100px;
+    padding: 2px;
+    box-shadow: 0 9px 50px 0 rgba(226, 79, 5, 0.849), 0 0px 0px 0 rgba(207, 76, 10, 0.418);
 }
-
-/* 
-main img {
-padding-left: 270px;
-
-}
-#hours{
-background-color:#00ff73 ;
-}
-#location{
-    background-color: white;
-
-}
- main div ul{
-    display: inline-block;
+.location,#hours{
     position: relative;
-    left:0px;
+    font-family:'Franklin Gothic Medium';
+    padding: 50px;
+    top:100px;
 }
-main div ul li {
-   text-decoration: none;
 
+.location h2,#hours h2{
+    position: relative;  
+    left:100px;
+    bottom: 30px;
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: darkslategray;
+}
+   div  iframe{
+    position: relative;  
+    padding: 10px;
+    top:30px;
+   display: inline-block;
+   width:220px;
+   height: 220px;
+   left: 200px;
+   background-color: rgba(0, 0, 0, 0.308);
+   border-radius: 20px;
+}
+.location ol li,#hours ul li ,#contact ul li{
+    position: relative;
+    padding-top: 20px;
+    font-size: larger;
+    left:100px;
+}
+#contact h2{
+    position: relative;  
+    left:100px;
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: darkslategray;
 }
 #contact{
-    background-color:#00ff73;
-    height: 60px;
-    text-align: center;
-    padding-top: 10px;
-}  */
+    position: relative;
+    font-family:'Franklin Gothic Medium';
+    top:90px;
+    left: 40px;;
+}
+#images img {
+    position: absolute; 
+    bottom: 40px;
+    left: 900px;
+    border-radius: 20px; 
+}
+#images p{
+    position: absolute; 
+    bottom: 10px;
+    left: 920px; 
+    font-size: larger;
+    font-weight: bolder;
+
+}

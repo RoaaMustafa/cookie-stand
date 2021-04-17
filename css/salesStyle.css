@@ -97,7 +97,7 @@ header h1{
     font-family: 'Yesteryear', cursive;
     font-weight: bolder;
     color: #fcd602;
-     padding-top: 10px;
+     padding-top: 30px;
      font-size: x-large;
 
 }
@@ -106,7 +106,7 @@ header h4{
     left: 140px;
     font-family: 'Fredoka One', cursive;
     color: #ff9900;
-    padding-top: 5px;
+    padding-top: 20px;
     font-size: large;
 }
 header a{
