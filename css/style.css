@@ -158,7 +158,7 @@ main div img{
     font-weight: bolder;
 
 }
-#images img , p{
+#images img ,#images p{
     background-color: #ffec83;
     padding: 3px;
 
