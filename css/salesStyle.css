@@ -28,6 +28,7 @@ td{
     border-radius: 20px;
     padding:30px;
     text-align: center;  
+    background-position: 0% 50%;
 }
 form{
    background-image: url(../images/wp.jpg);
@@ -76,7 +77,8 @@ form input:last-child{
 form input:last-child:hover{
 box-shadow: 0 0 5px rgb(230, 105, 3);  
 }
-
+form input:last-child:active{
+}
 header{
     border-radius: 20px;
     position: relative;
@@ -138,8 +140,10 @@ footer{
 }
 
 td:hover{
-    box-shadow: 0 0 30px rgb(255, 120, 9);  
+    box-shadow: 0 0 30px rgb(255, 120, 9);
+    background-position: 0% 0%;
 }
+
 th:hover{
     box-shadow: 0 0 20px rgb(255, 102, 0);    
 }
